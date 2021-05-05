@@ -1,7 +1,6 @@
 {
     "env": {
         "browser": true,
-        "commonjs": true,
         "es2021": true
     },
     "extends": [
@@ -11,5 +10,6 @@
         "ecmaVersion": 12
     },
     "rules": {
+        "semi": "never"
     }
 }
