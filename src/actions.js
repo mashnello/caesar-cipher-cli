@@ -7,8 +7,8 @@ import {
 } from './streams.js'
 import { validation } from './validation.js'
 
-export const transformAction = ({ input, shift, action, output }) => {
-  validation({ input, shift, action, output })
+export const transformAction = async ({ input, shift, action, output }) => {
+  await validation({ input, shift, action, output })
 
   pipeline(
     readStream(input),
