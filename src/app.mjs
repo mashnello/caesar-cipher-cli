@@ -1,6 +1,6 @@
 import { Command } from 'commander/esm.mjs'
 
-import { transformAction } from './actions.js'
+import { transformAction } from './actions.mjs'
 
 const program = new Command()
 

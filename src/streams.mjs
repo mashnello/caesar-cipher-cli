@@ -3,7 +3,7 @@ import { createInterface } from 'readline'
 import { Transform } from 'stream'
 import { EOL } from 'os'
 
-import { cipherUtil } from './cipherUtil.js'
+import { cipherUtil } from './cipherUtil.mjs'
 
 
 const readLine = createInterface({ input: process.stdin })

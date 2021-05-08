@@ -4,8 +4,8 @@ import {
   readStream,
   transformStream,
   writeStream,
-} from './streams.js'
-import { validation } from './validation.js'
+} from './streams.mjs'
+import { validation } from './validation.mjs'
 
 export const transformAction = async ({ input, shift, action, output }) => {
   await validation({ input, shift, action, output })

@@ -1,4 +1,4 @@
-import { checkFilesAccess } from './checkFilesAccess.js'
+import { checkFilesAccess } from './checkFilesAccess.mjs'
 
 const checkRequired = (...args) => {
   if (!args.every(Boolean)) {
