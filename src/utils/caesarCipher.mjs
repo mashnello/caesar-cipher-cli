@@ -13,7 +13,7 @@ const LOWER_CASE = {
 const getRegister = (charCode) =>
   charCode >= LOWER_CASE.start ? LOWER_CASE : UPPER_CASE
 
-export const caesarCipherUtil = (string, shift, action) => {
+export const caesarCipher = (string, shift, action) => {
   const shiftDir = action === 'encode' ? 1 : -1
   const parsedShift = shift % ALPHABETH_LENGTH * shiftDir
   let result = ''

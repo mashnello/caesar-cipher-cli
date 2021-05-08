@@ -1,1 +1,1 @@
-export * from './command.mjs'
+import './command.mjs'

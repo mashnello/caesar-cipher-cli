@@ -1,11 +1,11 @@
 import { Transform } from 'stream'
 import { EOL } from 'os'
 
-import { caesarCipherUtil } from '../caesarCipherUtil.mjs'
+import { caesarCipher } from '../utils/index.mjs'
 
 export const transformStream = (shift, action) => new Transform({
   transform(chunk, _, callback) {
-    const transformed = caesarCipherUtil(
+    const transformed = caesarCipher(
       chunk.toString(), shift, action
     ).concat(EOL)
 
