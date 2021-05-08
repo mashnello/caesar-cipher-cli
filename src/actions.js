@@ -15,7 +15,13 @@ export const transformAction = async ({ input, shift, action, output }) => {
     transformStream(shift, action),
     writeStream(output),
   ).then(
-    () => console.log('Pipeline succeded'),
-    (err) => console.error('Pipeline failed', err)
+    () => {
+      console.log('Pipeline succeded')
+      process.exit(0)
+    },
+    (err) => {
+      console.error('Pipeline failed', err)
+      process.exit(1)
+    }
   )
 }

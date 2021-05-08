@@ -9,5 +9,5 @@ const checkRequired = (...args) => {
 
 export const validation = async ({ input, output, shift, action, }) => {
   checkRequired(shift, action)
-  await checkFilesAccess(input, output)
+  await checkFilesAccess([input, output].filter(Boolean))
 }

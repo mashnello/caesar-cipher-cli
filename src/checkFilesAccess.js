@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs'
 
-export const checkFilesAccess = async (...paths) => {
+export const checkFilesAccess = async (paths) => {
   try {
     await Promise.all(paths.map(path => fs.access(path)))
   } catch (err) {

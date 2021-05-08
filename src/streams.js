@@ -1,12 +1,30 @@
 import { createReadStream, createWriteStream } from 'fs'
+import { createInterface } from 'readline'
 import { Transform } from 'stream'
 import { EOL } from 'os'
 
 import { cipherUtil } from './cipherUtil.js'
 
-export const readStream = (path) => createReadStream(path)
 
-export const writeStream = (path) => createWriteStream(path, { flags: 'a' })
+const readLine = createInterface({ input: process.stdin })
+  .on('close', () => process.exit(0))
+
+export const readStream = (path) => {
+  if (!path) {
+    console.log('Please enter your text, press Ctrl+C to exit')
+    return readLine
+  }
+
+  return createReadStream(path)
+}
+
+export const writeStream = (path) => {
+  if (!path) {
+    return process.stdout
+  }
+
+  return createWriteStream(path, { flags: 'a' })
+}
 
 export const transformStream = (shift, action) => new Transform({
   transform(chunk, _, callback) {
