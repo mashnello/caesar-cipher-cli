@@ -13,6 +13,7 @@ To run the app please do the following:
 ```bash
 git clone https://github.com/mashnello/caesar-cipher-cli.git
 cd ./caesar-cipher-cli
+git checkout dev
 npm i
 node my_caesar_cli -a encode -s 7 -i "./input.txt" -o "./output.txt"
 ```
