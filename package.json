@@ -1,0 +1,29 @@
+{
+  "name": "caesar-cipher-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "my_caesar_cli.js",
+  "type": "module",
+  "scripts": {
+    "eslint": "eslint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mashnello/caesar-cipher-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mashnello/caesar-cipher-cli/issues"
+  },
+  "homepage": "https://github.com/mashnello/caesar-cipher-cli#readme",
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "dependencies": {
+    "commander": "^7.2.0"
+  }
+}
